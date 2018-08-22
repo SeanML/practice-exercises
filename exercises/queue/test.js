@@ -29,3 +29,13 @@ test('Order of elements is maintained', () => {
   expect(q.remove()).toEqual(3);
   expect(q.remove()).toEqual(undefined);
 });
+
+test('Returns the correct length of the queue', () => {
+  const q = new Queue();
+  q.add(1);
+  q.add(2);
+  q.add(3);
+  expect(q.size()).toEqual(3);
+  q.remove();
+  expect(q.size()).toEqual(2);
+})
